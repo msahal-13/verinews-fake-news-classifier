@@ -37,6 +37,31 @@ These files are combined and labeled into a unified dataset:
 
 > ⚠️ Note: Due to the dataset size (~100MB), the dataset is not included in this repository.
 
+
+## 📊 Model Performance
+
+The model achieves strong performance on real-world news data, with an overall accuracy of approximately **95%**.
+
+### 📌 Confusion Matrix Results
+
+- True Positives (FAKE → FAKE): **4448**  
+- True Positives (REAL → REAL): **4092**  
+- False Positives (REAL predicted as FAKE): **155**  
+- False Negatives (FAKE predicted as REAL): **285**
+
+### 🔍 Key Insights
+
+- High accuracy in distinguishing between REAL and FAKE news  
+- Low misclassification rate relative to dataset size (~9000 samples)  
+- Strong balance between precision and recall across both classes  
+- Model generalizes well on real-world data  
+
+![Confusion Matrix](confusion_matrix.png)
+
+> 📌 *Confusion Matrix Visualization*  
+> This heatmap illustrates the model’s prediction performance, showing correct classifications and errors across REAL and FAKE categories.
+
+
 ### 🛠️ Using Your Own Dataset
 
 You can also use your own dataset as long as it follows this format:
