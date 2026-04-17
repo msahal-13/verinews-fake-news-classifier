@@ -56,7 +56,8 @@ The model achieves strong performance on real-world news data, with an overall a
 - Strong balance between precision and recall across both classes  
 - Model generalizes well on real-world data  
 
-![Confusion Matrix](confusion_matrix.png)
+<img width="632" height="540" alt="Screenshot 2026-04-17 at 6 56 14 AM" src="https://github.com/user-attachments/assets/c4f8b17b-1768-4f8f-89e3-06eff93bb847" />
+
 
 > 📌 *Confusion Matrix Visualization*  
 > This heatmap illustrates the model’s prediction performance, showing correct classifications and errors across REAL and FAKE categories.
