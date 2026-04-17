@@ -1,37 +1,47 @@
-# Verinews-fake-news-classifier
-VeriNews is a machine learning project that can tell if a news headline is real or fake. It uses Python and some basic natural language processing to understand the text and make predictions. You can even try it out with your own headline using a simple web app.
+# VeriNews 📰🔍  
+**Fake News Detection using Machine Learning & NLP**
 
+VeriNews is an end-to-end machine learning project that classifies news headlines/articles as **REAL** or **FAKE** using Natural Language Processing (NLP) techniques and a probabilistic classifier.
 
+This project demonstrates the complete ML pipeline — from raw data preprocessing to model evaluation and visualization — showcasing how AI can be applied to detect misinformation.
 
-## 🔍 Features
+---
 
-- Preprocesses text (lowercase, remove stopwords/punctuation, stemming)
-- Converts text to features using TF-IDF
-- Trains a Multinomial Naive Bayes classifier
-- Evaluates with confusion matrix, classification report, and ROC curve
-- Exports model using `joblib`
-- Optional: Simple UI with Streamlit for user input
+## ✨ Features
+
+- Text preprocessing (lowercasing, punctuation removal, stopword filtering, stemming)
+- Feature extraction using **TF-IDF vectorization**
+- Model training using **Multinomial Naive Bayes**
+- Evaluation using:
+  - Accuracy score
+  - Confusion matrix
+  - Classification report
+- Visualization with **Matplotlib** and **Seaborn**
+- Handles large real-world dataset (~100MB)
 
 ---
 
 ## 📂 Dataset
 
-Use the [Kaggle Fake News Dataset](https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset) or any CSV with at least:
-- `text`: the article/headline
-- `label`: either "FAKE" or "REAL"
+This project uses the **Fake and Real News Dataset** from Kaggle:
 
----
+🔗 https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset
 
-## 🚀 How to Run
+The dataset includes:
+- `Fake.csv`
+- `True.csv`
 
-1. Clone this repo:
-git clone https://github.com/msahal-13/verinews-fake-news-classifier.git
-cd verinews-fake-news-classifier
+These files are combined and labeled into a unified dataset:
+- `text` → news content  
+- `label` → `FAKE` or `REAL`
 
-2. Install dependencies:
-pip install -r requirements.txt
+> ⚠️ Note: Due to the dataset size (~100MB), the dataset is not included in this repository.
 
-3. Add your dataset as `fake_or_real_news.csv`
+### 🛠️ Using Your Own Dataset
 
-4. Run the classifier:
-python verinews_classifier.py
+You can also use your own dataset as long as it follows this format:
+
+```csv
+text,label
+"Some news headline or article",FAKE
+"Another news example",REAL
